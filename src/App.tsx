@@ -1,49 +1,22 @@
 import './App.scss';
+import Carta from './components/Carta';
 
 const App: React.FC = () => {
   return (
-    <div className="studio">
-      <div className="studio__container">
-        <header className="studio__header">
-          <img src="/src/assets/logo.png" alt="" className="studio__logo" />
-          <nav>
-            <ul className="studio__menu">
-              <li>
-                <a href="#" className="studio__menuItem">
-                  <img src="/src/assets/google.png" alt="" />
-                </a>
-              </li>
-              <li>
-                <a href="#" className="studio__menuItem">
-                  <img src="/src/assets/facebook.png" alt="" />
-                </a>
-              </li>
-              <li>
-                <a href="#" className="studio__menuItem">
-                  <img src="/src/assets/twitter.png" alt="" />
-                </a>
-              </li>
-              <li>
-                <a href="#" className="studio__menuItem">
-                  <img src="/src/assets/instagram.png" alt="" />
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </header>
-        <main className="studio__content">
-          <div className="studio__text">
-            <p className="studio__author">HAYAO MIYAZAKI</p>
-            <h1 className="studio__title">A VIAGEM
-              DE CHIHIRO</h1>
-            <p className="studio__description">Chihiro chega a um mundo mágico dominado por uma bruxa. Aqueles que a desobedecem são transformados em animais.</p>
-            <div className="studio__buttons">
-              <button className="studio__now"> <img src="/src/assets/play.png"/> assistir agora</button>
-              <button className="studio__trailer">assista o trailer</button>
-            </div>
-          </div>
-          <img className="studio__illustration" src="/src/assets/ilustração.png" alt="" />
-        </main>
+    <div className="memoween">
+      <div className="memoween__content">
+        <h1 className="memoween__title">Jogo da Memória</h1>
+        <div className="memoween__container">
+          <Carta imagem="/src/assets/1.png" />
+          <Carta imagem="/src/assets/2.png" />
+          <Carta imagem="/src/assets/3.png" />
+          <Carta imagem="/src/assets/4.png" />
+          <Carta imagem="/src/assets/5.png" />
+          <Carta imagem="/src/assets/6.png" />
+          <Carta imagem="/src/assets/7.png" />
+          <Carta imagem="/src/assets/8.png" />
+          <Carta imagem="/src/assets/9.png" />
+        </div>
       </div>
     </div>
   );

@@ -1,212 +1,28 @@
-.studio {
+.memoween {
   display: flex;
   justify-content: center;
-  width: 100%;
-
-  &__container {
-    max-width: 1216px;
-    padding: 0 23px;
-    width: 100%;
-
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-      align-items: center;
-    }
-  }
-
-  &__header {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    margin: 48px 0;
-
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-      margin: 32px 0;
-    }
-
-    @media screen and (max-width: 768px) {
-      justify-content: center;
-    }
-
-  }
-
-  &__logo {
-    cursor: pointer;
-
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-      max-width: 135px;
-    }
-
-
-  }
-
-  &__illustration {
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-      max-width: 327px;
-      margin-bottom: 24px;
-      width: 100%;
-    }
-
-    @media screen and (max-width: 768px) {
-      margin-bottom: 24px;
-      max-width: 250px;
-    }
-  }
-
-  &__menu {
-    align-items: center;
-    display: flex;
-    gap: 24px;
-    list-style-type: none;
-    text-decoration: none;
-
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
-
-    img {
-      background-color: #FFFFFF33;
-      border: 1px solid #FFFFFF;
-      border-radius: 50%;
-      padding: 12px;
-
-      @media screen and (min-width: 768px) and (max-width: 1024px) {
-        padding: 7.67px;
-      }
-    }
-  }
+  height: 100vh;
 
   &__content {
     display: flex;
-    justify-content: space-between;
-    margin-top: 144px;
-
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-      align-items: center;
-      display: flex;
-      flex-direction: column-reverse;
-      margin-top: 80px;
-    }
-
-    @media screen and (max-width: 768px) {
-      align-items: center;
-      display: flex;
-      flex-direction: column-reverse;
-      margin-top: 80px;
-    }
+    flex-direction: column;
+    
   }
 
-  &__text {
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-      max-width: 448px;
-      width: 100%;
-    }
-  }
-
-  &__author {
-    color: var(--dark-20);
-    font-family: 'Open Sans';
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 27.24px;
-    text-align: left;
-
-    @media screen and (max-width: 1024px) {
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 21.79px;
-      text-align: left;
-
-    }
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    max-width: 1300px;
   }
 
   &__title {
-    color: var(--dark-20);
-    font-family: var(--andada);
-    font-size: 64px;
-    font-weight: 800;
-    line-height: 70.4px;
-    margin-bottom: 32px;
-    margin-top: 8px;
-    max-width: 430px;
-    text-align: left;
-    width: 100%;
-
-    @media screen and (max-width: 1024px) {
-      font-size: 40px;
-      font-weight: 800;
-      line-height: 44px;
-      text-align: left;
-
-    }
-  }
-
-  &__description {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 36px;
-    margin-bottom: 48px;
-    max-width: 488px;
-    text-align: left;
-
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 24px;
-      text-align: center;
-      max-width: max-content;
-    }
-
-    @media screen and (max-width: 768px) {
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 24px;
-      text-align: left;
-      max-width: max-content;
-    }
-  }
-
-  &__buttons {
-    display: flex;
-    gap: 32px;
-
-    @media screen and (max-width: 1024px) {
-      flex-direction: column;
-    }
-
-    button {
-      border-radius: 4px;
-      cursor: pointer;
-      font-family: var(--roboto);
-      padding: 14px 32px;
-      text-transform: uppercase;
-
-      @media screen and (max-width: 1024px) {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-      }
-    }
-  }
-
-  &__now {
-    background-color: var(--brand-color);
-    color: var(--dark-10);
-    display: flex;
-    gap: 8px;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 21.09px;
+    color: #FFFFFF;
+    font-size: 96px;
+    line-height: 116.72px;
+    margin: 80px 0;
+    -webkit-text-stroke: 1px #8958FF;
     text-align: center;
-
-  }
-
-  &__trailer {
-    border: var(--brand-color) solid 2px;
-    background-color: transparent;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 21.09px;
-    text-align: center;
-
   }
 }
