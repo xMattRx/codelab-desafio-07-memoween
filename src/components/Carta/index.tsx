@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './index.scss';
 
 type CartaProps = {
     imagem: string;
+    index: number;
+    virarCarta: (index: number) => void;
+    virada: boolean;
 };
 
-const Carta: React.FC<CartaProps> = ({ imagem }) => {
-    const [virada, setVirada] = useState(false);
-
+const Carta: React.FC<CartaProps> = ({ imagem, index, virarCarta, virada }) => {
     const handleClick = () => {
-        setVirada(!virada); // Alterna o estado de frente e verso
+        if (!virada) {
+            virarCarta(index); // Vira a carta se ela ainda não estiver virada
+        }
     };
 
     return (
