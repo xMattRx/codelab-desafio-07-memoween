@@ -18,15 +18,29 @@ const App: React.FC = () => {
   const [cartas, setCartas] = useState<string[]>([]);
   const [viradas, setViradas] = useState<number[]>([]);
   const [paresEncontrados, setParesEncontrados] = useState<number[]>([]);
+  const [jogoGanho, setJogoGanho] = useState(false);
 
   useEffect(() => {
+    embaralharCartas();
+  }, []);
+
+  useEffect(() => {
+    if (paresEncontrados.length === cartas.length && cartas.length > 0) {
+      setJogoGanho(true);
+    }
+  }, [paresEncontrados, cartas]);
+
+  const embaralharCartas = () => {
     const cartasDuplicadas = [...imagens, ...imagens];
     const cartasEmbaralhadas = cartasDuplicadas.sort(() => 0.5 - Math.random());
     setCartas(cartasEmbaralhadas);
-  }, []);
+    setViradas([]);
+    setParesEncontrados([]);
+    setJogoGanho(false);
+  };
 
   const virarCarta = (index: number) => {
-    if (viradas.length === 2) return;
+    if (viradas.length === 2 || paresEncontrados.includes(index)) return;
 
     setViradas((prev) => [...prev, index]);
 
@@ -55,6 +69,17 @@ const App: React.FC = () => {
           ))}
         </div>
       </div>
+
+      {(jogoGanho &&
+        <div className="modal">
+          <div className="modal__content">
+            <img className="modal__web" src="/src/assets/Web.png" />
+            <h2>Buuh!</h2>
+            <p>Parabéns! Você completou este jogo da memória. Que tal experimentar uma dificuldade diferente ou jogar novamente na mesma dificuldade?</p>
+            <button className="modal__button" onClick={embaralharCartas}>Jogar novamente</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
