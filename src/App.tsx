@@ -4,15 +4,15 @@ import Carta from './components/Carta';
 
 const App: React.FC = () => {
   const imagens = [
-    "/src/assets/1.png",
-    "/src/assets/2.png",
-    "/src/assets/3.png",
-    "/src/assets/4.png",
-    "/src/assets/5.png",
-    "/src/assets/6.png",
-    "/src/assets/7.png",
-    "/src/assets/8.png",
-    "/src/assets/9.png"
+    "/1.png",
+    "/2.png",
+    "/3.png",
+    "/4.png",
+    "/5.png",
+    "/6.png",
+    "/7.png",
+    "/8.png",
+    "/9.png"
   ];
 
   const [cartas, setCartas] = useState<string[]>([]);
@@ -73,7 +73,7 @@ const App: React.FC = () => {
       {(jogoGanho &&
         <div className="modal">
           <div className="modal__content">
-            <img className="modal__web" src="/src/assets/Web.png" />
+            <img className="modal__web" src="/Web.png" />
             <h2>Buuh!</h2>
             <p>Parabéns! Você completou este jogo da memória. Que tal experimentar uma dificuldade diferente ou jogar novamente na mesma dificuldade?</p>
             <button className="modal__button" onClick={embaralharCartas}>Jogar novamente</button>
